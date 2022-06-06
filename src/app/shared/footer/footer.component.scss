@@ -1,0 +1,41 @@
+footer{
+    // height: 15vh;
+    bottom: 0px;
+    padding: 1em;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .logo img{
+        height: 25px;
+        width: 100px;
+        margin-bottom: .7em;
+    }
+
+    .navbar{
+        display: flex;
+        color: white;
+        flex-direction: row;
+        margin-bottom: .7em;
+
+
+        span{
+            margin-right: .8em;
+        }
+    }
+
+    .stores{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        margin-bottom: .7em;
+
+    }
+
+    .copyright{
+        color: white;
+    }
+}

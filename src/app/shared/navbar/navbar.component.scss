@@ -1,0 +1,34 @@
+header{
+    // height: 7vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    section.login{
+        display: flex;
+        align-items: center;
+
+        .login-button{
+            padding: 0 9px 0 9px;
+            display: flex;
+            align-items: center;
+            color: white;
+            border-right: 1px solid white;
+            border-left: 1px solid white;
+
+            span{
+                margin-right: .5em;
+            }
+        }
+
+        .login-freeTrial{
+            margin-left: 2em;
+            padding: .2em 1em .2em 1em;
+            background-color: red;
+            color: white;
+            border-radius: 8px;
+        }
+    }
+}
