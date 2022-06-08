@@ -1,8 +1,24 @@
 <header>
     <section class="logo">
-        <img src="../../../assets/logo.png" alt="">
+        <img class="logo-image" (click)="redirect('home');" src="../../../assets/logo.png" alt="">
+        <div
+            *ngIf="ruta.length > 0" 
+            [ngStyle]="{'background-color': ruta === 'movies' ? 'red' : 'black'}" (click)="redirect('movies')">
+            <img src="../../../assets/icon-movies.png" alt="">
+            <span>Movies</span>
+        </div>
+        <div
+            *ngIf="ruta.length > 0" 
+            [ngStyle]="{'background-color': ruta === 'series' ? 'red' : 'black'}" (click)="redirect('series');">
+            <img src="../../../assets/icon-series.png" alt="">
+            <span>Series</span>
+        </div>
     </section>
     <section class="login">
+        <div class="login-filter" *ngIf="ruta.length > 0">
+            <img src="../../../assets/icon-filter.png" alt="">
+            <span>Filters</span>
+        </div>
         <div class="login-button">
             <span>Login</span>
             <img src="../../../assets/icon-login.png" alt="">

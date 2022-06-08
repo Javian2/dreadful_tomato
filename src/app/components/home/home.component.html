@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <main>
-    <article>
+    <article (click)="redirect('movies');">
         <div class="imagen">
             <img src="../../../assets/movies.png" alt="">
         </div>
@@ -8,7 +8,7 @@
             <span>Movies</span>
         </div>
     </article>
-    <article>
+    <article (click)="redirect('series');">
         <div class="imagen">
             <img src="../../../assets/series.png" alt="">
         </div>
@@ -17,6 +17,6 @@
         </div>
     </article>
 </main>
-<app-footer style="bottom: 0;"></app-footer>
+<app-footer></app-footer>
 
 
