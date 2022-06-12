@@ -2,11 +2,31 @@
     <app-navbar [ruta]="'movies'"></app-navbar>
     <app-filters></app-filters>
     <main>
-        <section *ngFor="let movie of movies | slice:0:10">
-            <figure>
-                <img [src]="movie.images['Poster Art'].url" alt="">
-            </figure>
-        </section>
+        <article class="movies">
+            <section *ngFor="let movie of movies | slice:0:10">
+                <figure>
+                    <img [src]="movie.images['Poster Art'].url" alt="">
+                </figure>
+                <article>
+                    <div>
+                        <span class="movie_titulo" [title]="movie.title">{{movie.title}}</span>
+                    </div>
+                    <div>
+                        <span>{{movie.releaseYear}}</span>
+                    </div>
+                    <div>
+                        <span>{{movie.description}}</span>
+                    </div>
+                </article>
+            </section>
+        </article>
+        <article class="pagination">
+            <section *ngFor="let item of [1, 2, 3, 4, 5]">
+                <div>
+                    <span>{{item}}</span>
+                </div>
+            </section>
+        </article>
     </main>
     <app-footer></app-footer>
 </div>
