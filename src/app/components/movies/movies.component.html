@@ -1,11 +1,11 @@
 <div class="container">
     <app-navbar [ruta]="'movies'"></app-navbar>
-    <app-filters></app-filters>
+    <app-filters (searchValue)="searchMovie($event)"></app-filters>
     <main>
         <article class="movies">
-            <section *ngFor="let movie of movies | slice:0:10">
+            <section *ngFor="let movie of moviesFiltradas | paginate: { itemsPerPage: 10, currentPage: paginaActual }">
                 <figure>
-                    <img [src]="movie.images['Poster Art'].url" alt="">
+                    <img [src]="movie.images['Poster Art'].url" (error)="movie.images['Poster Art'].url = no_image" alt="">
                 </figure>
                 <article>
                     <div>
@@ -21,11 +21,7 @@
             </section>
         </article>
         <article class="pagination">
-            <section *ngFor="let item of [1, 2, 3, 4, 5]">
-                <div>
-                    <span>{{item}}</span>
-                </div>
-            </section>
+            <pagination-controls (pageChange)="paginaActual = $event"></pagination-controls>
         </article>
     </main>
     <app-footer></app-footer>

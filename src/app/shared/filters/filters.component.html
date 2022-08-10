@@ -1,6 +1,6 @@
 <div class="container">
     <section class="container-searchbar">
-        <input placeholder="Name" type="search">
+        <input #searchbar placeholder="Name" (input)="search(searchbar.value);" type="search">
     </section>
     <section class="container-datapicker">
         <input type="date">

@@ -1,2 +1,28 @@
-<app-navbar [ruta]="'series'"></app-navbar>
-<app-filters></app-filters>
+<div class="container">
+    <app-navbar [ruta]="'series'"></app-navbar>
+    <app-filters (searchValue)="searchSerie($event)"></app-filters>
+    <main>
+        <article class="series">
+            <section *ngFor="let serie of seriesFiltradas | paginate: { itemsPerPage: 10, currentPage: paginaActual }">
+                <figure>
+                    <img [src]="serie.images['Poster Art'].url" (error)="serie.images['Poster Art'].url = no_image" alt="">
+                </figure>
+                <article>
+                    <div>
+                        <span class="serie_titulo" [title]="serie.title">{{serie.title}}</span>
+                    </div>
+                    <div>
+                        <span>{{serie.releaseYear}}</span>
+                    </div>
+                    <div>
+                        <span>{{serie.description}}</span>
+                    </div>
+                </article>
+            </section>
+        </article>
+        <article class="pagination">
+            <pagination-controls (pageChange)="paginaActual = $event"></pagination-controls>
+        </article>
+    </main>
+    <app-footer></app-footer>
+</div>

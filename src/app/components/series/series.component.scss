@@ -1,0 +1,96 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    main{
+        background-color: rgb(28, 25, 25);
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+        article.series{
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(5, 1fr);
+            padding: 0px 160px 0px 160px;
+
+            section{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                cursor: pointer;
+                figure{
+                    margin: 5px;
+                    img{
+                        height: 250px;
+                        width: 200px;
+                    }
+                }
+                
+                article{
+                    position: absolute;
+                    width: 200px;
+                    padding: 10px 0 10px 0;
+                    background-color: black;
+                    color: white;
+                    display: flex;
+                    margin-top: 13.5rem;
+                    // margin-top: 2.3rem;
+                    flex-direction: column;
+                    opacity: 0.7;
+
+                    span.serie_titulo{
+                        white-space: nowrap;
+                        width: 200px;
+                        max-width: 200px;
+                        display: block;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        font-size: 13pt;
+                        font-weight: bold;
+                    }
+
+                    span:not(.serie_titulo){
+                        display: none;
+                    }
+                }
+            }
+
+            section:hover article{
+                margin-top: 2.3rem !important;
+
+                span:not(.serie_titulo){
+                    display: flex;
+                }
+            } 
+        }
+
+        article.pagination{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            ::ng-deep .ngx-pagination{
+
+                color: white;
+
+                li{
+                    background-color: red;
+                    border-radius: 100%;
+                    margin-right: 1em;
+                }
+
+                .pagination-previous, .pagination-next{
+                    background-color: transparent !important;
+                }
+            }
+        }
+    
+
+    }
+    
+}
