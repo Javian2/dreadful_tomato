@@ -11,12 +11,17 @@ export class FiltersComponent implements OnInit {
   constructor() { }
 
   @Output() searchValue = new EventEmitter<string>();
+  @Output() dateValue = new EventEmitter<number>();
 
   ngOnInit(): void {
   }
 
   search(value:string){
     this.searchValue.emit(value)
+  }
+
+  filterDate(evento:any){
+    this.dateValue.emit(new Date(evento.target.value).getFullYear())
   }
 
 }

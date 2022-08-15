@@ -1,9 +1,11 @@
 <div class="container">
     <app-navbar [ruta]="'series'"></app-navbar>
-    <app-filters (searchValue)="searchSerie($event)"></app-filters>
+    <app-filters (dateValue)="dateSerie($event)" (searchValue)="searchSerie($event)"></app-filters>
     <main>
         <article class="series">
-            <section *ngFor="let serie of seriesFiltradas | paginate: { itemsPerPage: 10, currentPage: paginaActual }">
+            <section *ngFor="let serie of series 
+            | paginate: { itemsPerPage: 10, currentPage: paginaActual } 
+            | filterSeries : filterText : filterYear">
                 <figure>
                     <img [src]="serie.images['Poster Art'].url" (error)="serie.images['Poster Art'].url = no_image" alt="">
                 </figure>

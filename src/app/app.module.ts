@@ -11,6 +11,8 @@ import { SeriesComponent } from './components/series/series.component';
 import { FiltersComponent } from './shared/filters/filters.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FilterSeriesPipe } from './pipes/filter-series.pipe';
+import { FilterMoviesPipe } from './pipes/filter-movies.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MoviesComponent,
     SeriesComponent,
     FiltersComponent,
+    FilterSeriesPipe,
+    FilterMoviesPipe,
   ],
   imports: [
     BrowserModule,

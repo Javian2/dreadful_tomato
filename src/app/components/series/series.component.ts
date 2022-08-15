@@ -10,10 +10,12 @@ import { Data, Entry } from '../../interfaces/data.model';
 export class SeriesComponent implements OnInit {
 
   series: Entry[] = []
-  seriesFiltradas: Entry[] = []
   paginaActual:number = 1;
   no_image:string = '../../../assets/no_image.png'
   search:string = ''
+
+  filterText:string = ''
+  filterYear:number = NaN;
 
   constructor(
     private _dataService:DataService
@@ -22,13 +24,14 @@ export class SeriesComponent implements OnInit {
   ngOnInit(): void {
     this._dataService.getData().subscribe((data:Data) => {
       this.series = data.entries.filter((movie:Entry) => movie.programType === 'series')
-      this.seriesFiltradas = JSON.parse(JSON.stringify(this.series))
     })
   }
 
-  searchSerie(value:string){
-    value = value.toLowerCase().replace(' ', '');
-    this.seriesFiltradas = this.series.filter(serie => serie.title.toLowerCase().replace(' ', '').includes(value))
+  dateSerie(year:number){
+    this.filterYear = year;
   }
 
+  searchSerie(text:string){
+    this.filterText = text;
+  }
 }

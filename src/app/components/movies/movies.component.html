@@ -1,9 +1,11 @@
 <div class="container">
     <app-navbar [ruta]="'movies'"></app-navbar>
-    <app-filters (searchValue)="searchMovie($event)"></app-filters>
+    <app-filters (dateValue)="dateMovie($event)" (searchValue)="searchMovie($event)"></app-filters>
     <main>
         <article class="movies">
-            <section *ngFor="let movie of moviesFiltradas | paginate: { itemsPerPage: 10, currentPage: paginaActual }">
+            <section *ngFor="let movie of movies 
+            | paginate: { itemsPerPage: 10, currentPage: paginaActual }
+            | filterMovies : filterText : filterYear">
                 <figure>
                     <img [src]="movie.images['Poster Art'].url" (error)="movie.images['Poster Art'].url = no_image" alt="">
                 </figure>

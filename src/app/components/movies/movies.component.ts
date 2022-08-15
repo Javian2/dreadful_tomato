@@ -11,9 +11,11 @@ import { Data, Entry } from '../../interfaces/data.model';
 export class MoviesComponent implements OnInit {
 
   movies: Entry[] = []
-  moviesFiltradas: Entry[] = []
   paginaActual:number = 1;
   no_image:string = '../../../assets/no_image.png'
+
+  filterText:string = ''
+  filterYear:number = NaN;
 
   constructor(
     private _dataService:DataService
@@ -22,14 +24,15 @@ export class MoviesComponent implements OnInit {
   ngOnInit(): void {
     this._dataService.getData().subscribe((data:Data) => {
       this.movies = data.entries.filter((movie:Entry) => movie.programType === 'movie')
-      this.moviesFiltradas = JSON.parse(JSON.stringify(this.movies))
-      console.log(this.movies)
     })
   }
 
-  searchMovie(value:string){
-    value = value.toLowerCase().replace(' ', '');
-    this.moviesFiltradas = this.movies.filter(movie => movie.title.toLowerCase().replace(' ', '').includes(value))
+  searchMovie(text:string){
+    this.filterText = text;
+  }
+
+  dateMovie(year:number){
+    this.filterYear = year;
   }
 
 }
