@@ -22,7 +22,12 @@
                 </article>
             </section>
         </article>
-        <article class="pagination">
+
+        <article class="movies-none" *ngIf="(movies | filterMovies : filterText : filterYear).length === 0">
+            <img src="../../../assets/not_found.png" alt="">
+        </article>
+        
+        <article class="pagination" *ngIf="(movies | filterMovies : filterText : filterYear).length > 0">
             <pagination-controls (pageChange)="paginaActual = $event"></pagination-controls>
         </article>
     </main>

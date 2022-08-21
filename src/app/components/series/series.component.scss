@@ -9,6 +9,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        min-height: 65vh;
+
         
         article.series{
             display: grid;
@@ -67,6 +69,11 @@
                     display: flex;
                 }
             } 
+        }
+
+        article.series-none{
+            display: flex;
+            justify-content: center;
         }
 
         article.pagination{
