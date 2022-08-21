@@ -1,4 +1,5 @@
-<header>
+<input type="checkbox" id="menu">
+<nav>
     <section class="logo">
         <img class="logo-image" (click)="redirect('home');" src="../../../assets/logo.png" alt="">
         <div
@@ -14,6 +15,9 @@
             <span>Series</span>
         </div>
     </section>
+    <label for="menu">
+        <img src="../../../assets/hamburger.png" alt="">
+    </label>
     <section class="login">
         <div class="login-filter" *ngIf="ruta.length > 0">
             <img src="../../../assets/icon-filter.png" alt="">
@@ -27,4 +31,5 @@
             <span>Start your free trial</span>
         </div>
     </section>
-</header>
+    
+</nav>

@@ -4,8 +4,8 @@
     <main>
         <article class="movies">
             <section *ngFor="let movie of movies 
-            | paginate: { itemsPerPage: 10, currentPage: paginaActual }
-            | filterMovies : filterText : filterYear">
+            | filterMovies : filterText : filterYear
+            | paginate: { itemsPerPage: 10, currentPage: paginaActual } ">
                 <figure>
                     <img [src]="movie.images['Poster Art'].url" (error)="movie.images['Poster Art'].url = no_image" alt="">
                 </figure>

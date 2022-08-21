@@ -6,7 +6,6 @@
 
     main{
         background-color: rgb(28, 25, 25);
-        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -14,6 +13,7 @@
         article.movies{
             display: grid;
             place-items: center;
+            justify-content: center;
             grid-template-columns: repeat(5, 1fr);
             padding: 0px 160px 0px 160px;
 
@@ -86,11 +86,33 @@
 
                 .pagination-previous, .pagination-next{
                     background-color: transparent !important;
+
+                    a{
+                        color: red;
+                    }
                 }
             }
         }
     
 
     }
-    
+}
+
+
+@media (max-width: 1200px) {
+    article.movies{
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@media (max-width: 800px) {
+    article.movies{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 450px) {
+    article.movies{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
 }

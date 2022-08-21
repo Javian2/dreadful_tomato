@@ -22,5 +22,4 @@ export class NavbarComponent implements OnInit {
   redirect(ruta:string){
     this.router.navigate([ruta])
   }
-
 }

@@ -1,5 +1,8 @@
-header{
-    // height: 7vh;
+input{
+    display: none;
+}
+
+nav{
     width: 100%;
     background-color: black;
     display: flex;
@@ -68,4 +71,71 @@ header{
             border-radius: 8px;
         }
     }
+
+    label{
+        display: none;
+        margin-right: 1em;
+        cursor: pointer;
+
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    section div:not(.login-freeTrial) span{
+        display: none;
+    }
+
+    section.logo{
+        margin-left: 1vw !important;
+    }
+
+    section.login{
+        margin-right: 1vw !important;
+    }
+}
+
+
+@media (max-width: 725px) {
+    label{
+        display: flex !important;
+    }
+
+    section:not(.logo){
+        display: none !important;
+    }
+
+    .logo-image{
+        height: 40px !important;
+        width: 160px !important;
+    }
+
+    input:checked + nav{
+
+        section{
+            display: flex !important;
+        }
+
+        section.logo div{
+            display: flex !important;
+        }
+
+        .login{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            right: 0;
+            margin-top: 12rem;
+            height: 9rem;
+            justify-content: space-around;
+
+            span{
+                display: flex;
+            }
+        }
+    } 
 }
