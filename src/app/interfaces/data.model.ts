@@ -12,7 +12,7 @@ export interface Entry {
 }
 
 export interface Images {
-    'Poster Art': PosterArt;
+    posterArt: PosterArt;
 }
 
 export interface PosterArt {

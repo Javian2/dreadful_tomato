@@ -7,7 +7,7 @@
             | filterSeries : filterText : filterYear
             | paginate: { itemsPerPage: 10, currentPage: paginaActual } ">
                 <figure>
-                    <img [src]="serie.images['Poster Art'].url" (error)="serie.images['Poster Art'].url = no_image" alt="">
+                    <img [src]="serie.images.posterArt.url" (error)="serie.images.posterArt.url = no_image" alt="">
                 </figure>
                 <article>
                     <div>

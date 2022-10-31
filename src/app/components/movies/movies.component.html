@@ -7,7 +7,7 @@
             | filterMovies : filterText : filterYear
             | paginate: { itemsPerPage: 10, currentPage: paginaActual } ">
                 <figure>
-                    <img [src]="movie.images['Poster Art'].url" (error)="movie.images['Poster Art'].url = no_image" alt="">
+                    <img [src]="movie.images.posterArt.url" (error)="movie.images['posterArt'].url = no_image" alt="">
                 </figure>
                 <article>
                     <div>
