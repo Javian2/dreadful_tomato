@@ -29,9 +29,11 @@ export class SeriesComponent implements OnInit {
 
   dateSerie(year:number){
     this.filterYear = year;
+    this.paginaActual = 1;
   }
 
   searchSerie(text:string){
     this.filterText = text;
+    this.paginaActual = 1;
   }
 }

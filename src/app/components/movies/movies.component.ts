@@ -29,10 +29,12 @@ export class MoviesComponent implements OnInit {
 
   searchMovie(text:string){
     this.filterText = text;
+    this.paginaActual = 1;
   }
 
   dateMovie(year:number){
     this.filterYear = year;
+    this.paginaActual = 1;
   }
 
 }
