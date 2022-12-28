@@ -1,67 +1,30 @@
 # Dreadful Tomato
 
-Dreadful Tomato is a new platform to find new movies and TV shows. The main objective is to
-help users to find information about their favourite TV shows and movies.
+![image](https://user-images.githubusercontent.com/52936547/209881878-36288987-91fc-4173-8186-468f075643a2.png)
 
-To do so, the company has to create a new web app that allow users do some fancy things.
+## Project description
 
-## What do you have to do?
+Dreadful tomato is a simple web platform that allows to visualise information about films and series. The project is composed of three different pages where all have in common a navigation menu and a footer. Concretely, the three pages are the following: 
 
-Dreadful Tomato needs to implement an awesome webpage where the users could view information
-about almost every new TV Shows and movie.
+- **Home page**: an interface is displayed that allows you to select whether to view series or films.
+- **Films**: page showing the films available as well as information about each of them.
+- **Series**: page showing the available series with information on each of them.
 
-The Design team has sent us the new interface which has to be implemented. As you could see,
-there are three different pages.
+## Technologies used
 
-* The first page is a landing page where user could select whether she wants to see TV shows
-  or movies and some claims and logo of Dreadful Tomato
-* The second one is the list of TV shows. Here, the user could filter TV shows by title and
-  release year. In that page the user will see a list of card with the Title, description
-  and image from each TV show.
-* The third one is quite similar, but for the movies. The user could filter by title and
-  release year as well, to see a list of cards with the information of every movie.
+- Angular 13
+- Typescript
+- Sass
 
-Here you could see the design of the 3 pages:
+## Functionalities
 
-Home page:
+- Show available movies or series in a paginated way (depending on the page where the user is).
+- Show the synopsis of the movie or series when hovering over the element.
+- Filter system that allows to show the different elements according to title and publication date
+- Responsive interface
 
-![](images/Dreadful%20Tomato%20-%20HOME.png)
+![image](https://user-images.githubusercontent.com/52936547/209882206-8e2e8bf0-0087-4202-9007-f8238d631868.png)
 
-TV shows page:
 
-![](images/Dreadful%20Tomato%20-%20POPULAR%20SERIES.png)
 
-Movies page:
 
-![](images/Dreadful%20Tomato%20-%20POPULAR%20MOVIES.png)
-
-## Technical Requirements
-
-Their CTO has no time to implement that, but she has defined some technical constraints:
-
-* This webapp has to be developed using Angular
-* Create reusable components
-* Create a **clean, maintainable and well-designed** code
-* Test your code until you are comfortable with that
-
-#### Considerations
-
-* To obtain the data of the TV Shows and Movies, you have to request [that file](https://static.rviewer.io/challenges/datasets/dreadful-tomatoes/data.json).
-* Use SCSS or SASS to manage your stylesheets
-* Use any component you want in the date picker to allow the user select the Year
-* Pay attention to hover effects (Home and Shows/Movies cards)
-
-To understand how you take decisions during the implementation, please write a README file
-explaining some of the most important parts of the application.
-
----
-
-## How to submit your solution
-
-* Push your code to the `devel` branch - we encourage you to commit regularly to show your thinking process was.
-* **Create a new Pull Request** to `main` branch & **merge it**.
-
-Once merged you **won't be able to change or add** anything to your solution, so double-check that everything is as
-you expected!
-
-Remember that **there is no countdown**, so take your time and implement a solution that you are proud!
