@@ -18,7 +18,7 @@ Dreadful tomato is a simple web platform that allows to visualise information ab
 
 ## Functionalities
 
-- Show available movies or series in a paginated way (depending on the page where the user is).
+- Show available movies or series (depending on the page where the user is) in a paginated way 
 - Show the synopsis of the movie or series when hovering over the element.
 - Filter system that allows to show the different elements according to title and publication date
 - Responsive interface
