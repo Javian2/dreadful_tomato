@@ -16,7 +16,7 @@ Dreadful tomato is a simple web platform that allows to visualise information ab
 - Typescript
 - Sass
 
-## Functionalities
+## Features
 
 - Show available movies or series (depending on the page where the user is) in a paginated way 
 - Show the synopsis of the movie or series when hovering over the element.
