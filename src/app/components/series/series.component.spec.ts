@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SeriesComponent } from './series.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FilterSeriesPipe } from 'src/app/pipes/filter-series.pipe';
 
 describe('SeriesComponent', () => {
   let component: SeriesComponent;
@@ -8,7 +11,8 @@ describe('SeriesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SeriesComponent ]
+      declarations: [ SeriesComponent, FilterSeriesPipe ],
+      imports: [ HttpClientModule, NgxPaginationModule ]
     })
     .compileComponents();
   });

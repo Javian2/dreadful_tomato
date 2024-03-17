@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MoviesComponent } from './movies.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FilterMoviesPipe } from 'src/app/pipes/filter-movies.pipe';
 
 describe('MoviesComponent', () => {
   let component: MoviesComponent;
@@ -8,7 +11,8 @@ describe('MoviesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MoviesComponent ]
+      declarations: [ MoviesComponent, FilterMoviesPipe ],
+      imports: [ HttpClientModule, NgxPaginationModule ]
     })
     .compileComponents();
   });
