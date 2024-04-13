@@ -9,7 +9,7 @@ import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { By } from '@angular/platform-browser';
 
-fdescribe('NavbarComponent', () => {
+describe('NavbarComponent', () => {
   let component: NavbarComponent;
   let fixture: ComponentFixture<NavbarComponent>;
   let router: any

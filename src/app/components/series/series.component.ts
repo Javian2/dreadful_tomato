@@ -22,8 +22,8 @@ export class SeriesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this._dataService.getData().subscribe((data:Data) => {
-      this.series = data.entries.filter((movie:Entry) => movie.programType === 'series')
+    this._dataService.getSeries().subscribe((series: Entry[]) => {
+      this.series = series
     })
   }
 

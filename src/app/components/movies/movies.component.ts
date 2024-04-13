@@ -22,8 +22,8 @@ export class MoviesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this._dataService.getData().subscribe((data:Data) => {
-      this.movies = data.entries.filter((movie:Entry) => movie.programType === 'movies')
+    this._dataService.getMovies().subscribe((movies: Entry[]) => {
+      this.movies = movies
     })
   }
 
