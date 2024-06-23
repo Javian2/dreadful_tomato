@@ -8,7 +8,7 @@ import { DataService } from 'src/app/services/data.service';
 import { OnInit } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
-fdescribe('MoviesComponent', () => {
+describe('MoviesComponent', () => {
   let component: MoviesComponent;
   let fixture: ComponentFixture<MoviesComponent>;
   let dataServiceMock: any;
